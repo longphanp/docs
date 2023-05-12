@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+select {
+  /*A reset of styles, including removing the default dropdown arrow*/
+  appearance: none;
+  /*Additional resets for further consistency*/
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid blueviolet;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+
+  /*Remove outline when select*/
+  outline: none;
+}
+
+select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: red;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
+
+.long {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.audio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  border: 1px solid crimson;
+  font-family: "Arial";
+}

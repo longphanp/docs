@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mix-blend-mode {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  overflow: hidden;
+  background-color: cyan;
+}
+
+.image-with-blend-mode {
+  mix-blend-mode: multiply;
+}
+
+.isolation-auto {
+  isolation: auto;
+}
+
+.isolation-isolate {
+  isolation: isolate;
+}
+
+.big-square {
+  background-color: crimson;
+  width: 200px;
+  height: 210px;
+}
+
+.small-square {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  padding: 2px;
+  mix-blend-mode: difference;
+}
+
+.backdrop-filter {
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/tom.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blur-button {
+  all: unset;
+  width: 100px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}

@@ -1,0 +1,64 @@
+.responsive-box {
+  width: 100%;
+  height: 400px;
+  background-color: black;
+}
+
+/*dark mode*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: black;
+    color: white;
+  }
+
+  .responsive-box {
+    background-color: white;
+  }
+}
+
+/*phone*/
+@media screen and (min-width: 320px) {
+  .responsive-box {
+    width: 300px;
+    height: 400px;
+    background-color: red;
+  }
+}
+
+/*tablet*/
+@media screen and (min-width: 768px) {
+  .responsive-box {
+    width: 300px;
+    height: 400px;
+    background-color: yellow;
+  }
+}
+
+/*desktop*/
+@media screen and (min-width: 1200px) {
+  .responsive-box {
+    width: 300px;
+    height: 400px;
+    background-color: green;
+  }
+}
+
+/*orientation*/
+@media (orientation: landscape) {
+  .responsive-box {
+    background-color: dodgerblue;
+  }
+}
+
+.container {
+  container-type: size;
+  width: 50%;
+  height: 300px;
+  background-color: yellow;
+}
+
+@container (width >= 300px) {
+  .container {
+    background-color: red;
+  }
+}

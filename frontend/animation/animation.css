@@ -1,0 +1,448 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/*-----------------------------------------*/
+
+.rotate-box {
+  width: 200px;
+  height: 200px;
+  background-color: violet;
+  transform-origin: bottom right;
+  animation-name: rotate-forever;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-forever {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*----------------------------------------------*/
+
+.transition-box {
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  background-color: magenta;
+
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+.transition-box:hover {
+  width: 400px;
+}
+
+/*-----------------------------------------------*/
+
+.no-transition-back {
+  width: 200px;
+  height: 200px;
+  color: black;
+  font-size: 32px;
+  text-align: center;
+  background-color: aquamarine;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+.span-transition {
+  width: 400px;
+}
+
+/*-----------------------------------------------*/
+
+.transition-half {
+  width: 200px;
+  height: 200px;
+  color: black;
+  font-size: 32px;
+  text-align: center;
+  background-color: darkgoldenrod;
+}
+
+/*--------------------------------------------------*/
+
+.animation-forward {
+  width: 200px;
+  height: 200px;
+  background: red;
+  position: relative;
+  animation-name: forward-mode;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes forward-mode {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: 200px;
+    background-color: blue;
+  }
+}
+
+/*-----------------------------------------------*/
+.expand-box {
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  background-color: chocolate;
+  transition-property: width;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+}
+
+/*-----------------------------------------------*/
+
+.slide-down {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}
+.slide-down::before {
+  content: "";
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: darkgreen;
+  animation-name: go-around;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes go-around {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+
+  25% {
+    top: 0;
+    left: 100px;
+  }
+
+  50% {
+    top: 100px;
+    left: 100px;
+  }
+
+  75% {
+    top: 100px;
+    left: 0;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+/*-----------------------------------------*/
+.rotate-stick {
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/dog.jpeg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.stick {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  clip-path: polygon(
+    0 0,
+    41% 0,
+    41% 49%,
+    59% 49%,
+    59% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+  animation-name: rotate-stick;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-stick {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+/*------------------------------------------*/
+
+.layout-display {
+  width: 100%;
+  height: 200px;
+  background-color: beige;
+  display: flex;
+  gap: 4px;
+}
+
+.animation-section {
+  min-width: 10%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: crimson;
+  transition-property: width flex-basis;
+  transition-duration: 1s;
+  transition-delay: 30ms;
+}
+
+.animation-section:hover {
+  flex-grow: 4;
+  background-color: darkcyan;
+}
+
+/*-------------------------------------------*/
+
+.transition-back-and-forth {
+  width: 300px;
+  height: 300px;
+  background-color: darkmagenta;
+  transition: transform 1000ms;
+}
+
+.transition-back-and-forth:hover {
+  transform: translateY(-25px);
+  transition: transform 250ms;
+}
+
+/*---------------------------------------------*/
+
+.multiple-animation {
+  width: 300px;
+  height: 300px;
+  background-color: brown;
+  animation: a 1000ms linear, b 1000ms linear 1000ms infinite;
+}
+
+@keyframes a {
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes b {
+  50% {
+    transform: translateX(50px);
+  }
+}
+
+/*------------------------------------------*/
+
+.motion-path {
+  width: 200px;
+  height: 200px;
+  display: flex;
+}
+
+.motion-path-box {
+  offset-path: path("M20,20 C20,100 200,0 200,100");
+  animation: move 3000ms infinite ease-in-out;
+  width: 0;
+  height: 0;
+  border: 40px solid transparent;
+  border-left-color: darkgray;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+
+  50% {
+    offset-distance: 100%;
+    offset-rotate: initial;
+  }
+  50.001% {
+    offset-distance: 100%;
+    offset-rotate: reverse;
+  }
+
+  100% {
+    offset-distance: 0%;
+    offset-rotate: reverse;
+  }
+}
+
+/*--------------------------------------------*/
+
+.svg-animation {
+  width: 200px;
+  height: 200px;
+}
+
+.svg-animation .line1 {
+  stroke-dasharray: 60px;
+  stroke-dashoffset: -60px;
+  transform-origin: center;
+  transition: stroke-dashoffset 300ms ease-in 300ms, rotate 300ms ease-in-out;
+}
+
+.svg-animation:hover .line1 {
+  rotate: 90deg;
+  stroke-dashoffset: 0px;
+  transition: stroke-dashoffset 300ms ease-in, rotate 300ms ease-in-out 300ms;
+}
+
+.svg-animation .line2 {
+  transform-origin: center;
+  stroke-dasharray: 60px;
+  stroke-dashoffset: -60px;
+  rotate: -90deg;
+  transition: stroke-dashoffset 300ms ease-in, rotate 300ms ease-in-out 300ms;
+}
+
+.svg-animation:hover .line2 {
+  stroke-dashoffset: 0px;
+  rotate: -270deg;
+}
+
+.svg-animation .line3 {
+  scale: 0;
+  transform-origin: center;
+  transition: scale 300ms ease-out, rotate 300ms ease-in-out 300ms;
+}
+
+.svg-animation:hover .line3 {
+  scale: 1;
+  rotate: 90deg;
+}
+
+/*-------------------------------------------*/
+.svg-animation2 {
+  width: 200px;
+  height: 200px;
+}
+
+.svg-animation2 .line {
+  width: 0;
+  x: 50;
+  transition: all 300ms ease-out;
+}
+
+.svg-animation2:hover .line {
+  x: 20;
+  width: 60px;
+}
+.svg-animation2 .circle {
+  opacity: 0;
+  stroke-dasharray: 188.4;
+  stroke-dashoffset: 188.4;
+  transition: stroke-dashoffset 500ms ease-in-out;
+}
+
+.svg-animation2:hover .circle {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}
+
+/*----------------------------------------------*/
+.clip-path-animation {
+  width: 200px;
+  height: 200px;
+}
+.clip-path-animation > .clip-path {
+  width: 200px;
+  height: 200px;
+  background-color: darkorange;
+  clip-path: path(
+    "M1 117.5C2.5 85.8333 32.1 18.3 138.5 1.5C174.667 60.5 197.8 166.3 1 117.5Z"
+  );
+  transition: all 1s ease-in-out;
+}
+
+.clip-path-animation:hover > .clip-path {
+  clip-path: path(
+    "M1 8.99987C157 -25.0001 11.1 61.8 117.5 45C153.667 104 127.5 -9.00013 1 8.99987Z"
+  );
+}
+
+/*------------------------------------------------*/
+:root {
+  --slide-duration: 500ms;
+}
+
+.slide-box {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  border: 1px solid cornflowerblue;
+  overflow: hidden;
+}
+
+.slide-box > .slide-bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: cornsilk;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--slide-duration) ease;
+}
+
+.slide-box:hover > .slide-bar {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/*---------------------------------------------*/
+
+.playground {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all 300ms linear;
+}
+
+.playground:hover > .dot {
+  top: 30px;
+  left: 50px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <h1>Require field</h1>
+    <form>
+      <label for="input">Enter somthing (required)</label>
+      <input class="input-required" id="input" name="name" required />
+      <button>Submit</button>
+    </form>
+    <hr />
+    <h1>Pattern field</h1>
+    <form>
+      <label for="input">Enter somthing </label>
+      <input class="input-pattern" id="input" name="name" pattern="^[0-9]+$" />
+      <button>Submit</button>
+    </form>
+    <hr />
+    <h1>Max-min length field</h1>
+    <form>
+      <label for="input">Enter somthing (6-8)</label>
+      <input
+        class="input-max-min"
+        id="input"
+        name="max-min"
+        minlength="6"
+        maxlength="8"
+        oninvalid="setCustomValidity('too short')"
+      />
+      <button>Submit</button>
+    </form>
+    <hr />
+    <h1>Number field</h1>
+    <form>
+      <label for="input">Enter somthing </label>
+      <input
+        class="input-number"
+        id="input"
+        name="number"
+        type="number"
+        inputmode="numeric"
+      />
+      <button>Submit</button>
+    </form>
+    <hr />
+    <h1>Autofill field</h1>
+    <form>
+      <label for="input">Enter somthing </label>
+      <input class="input-autofill" id="input" autocomplete="on" />
+      <button>Submit</button>
+    </form>
+    <hr />
+    <h1>File field</h1>
+    <form enctype="multipart/form-data" action="upload" method="POST">
+      <label class="label-file"
+        >Choose file
+        <input class="input-file" type="file" id="input" />
+      </label>
+      <button>Submit</button>
+    </form>
+    <hr />
+    <h1>Cardet color</h1>
+    <input class="caret-color" placeholder="Text here"></input>
+  </body>
+</html>

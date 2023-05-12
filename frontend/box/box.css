@@ -1,0 +1,156 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+
+.box-shadow {
+  height: 100px;
+  width: 100px;
+  border: 1px solid green;
+  box-shadow: 19px 5px 0px red;
+}
+
+.half-color {
+  height: 100px;
+  width: 100px;
+  border: 1px solid orange;
+  box-shadow: inset 50px 0px black;
+}
+
+.box-background {
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/dog.jpeg");
+  background-position: 100px 100px;
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  border: 1px solid aqua;
+}
+
+.trapezoid {
+  border-bottom: 50px solid cadetblue;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 125px;
+}
+
+.triangle {
+  border-bottom: 120px solid yellowgreen;
+  border-left: 0px solid transparent;
+  border-right: 120px solid transparent;
+  height: 0;
+  width: 0;
+}
+
+.parallelogram {
+  width: 200px;
+  height: 100px;
+  transform: skew(20deg);
+  background-color: darkkhaki;
+}
+
+.mask-url {
+  background-image: url("../images/dog.jpeg");
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mask-image: url("../images/mask.svg");
+  -webkit-mask-image: url("../images/mask.svg");
+  -webkit-mask-repeat: no-repeat;
+}
+
+.clip-path1 {
+  width: 200px;
+  height: 200px;
+  background: url("../images/tom.png");
+  clip-path: path(
+    "M8.5 128C54.0635 128 91 91.2873 91 46C91 29.6551 86.1887 14.4272 77.8969 1.63906C81.9894 1.07881 86.1651 0.777783 90.407 0.75314C143.112 0.447018 186.086 42.9249 186.393 95.6301C186.699 148.335 144.221 191.31 91.5156 191.616C49.6405 191.859 13.9082 165.094 0.837875 127.651C3.36075 127.882 5.9165 128 8.5 128Z"
+  );
+}
+
+.clip-path2 {
+  width: 200px;
+  height: 200px;
+  background: url("../images/tom.png");
+  clip-path: url("#fool");
+}
+
+.resize-box {
+  width: 200px;
+  height: 200px;
+  background-color: darkturquoise;
+  overflow: hidden;
+  resize: both;
+}
+
+.linear-gradient {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  background: linear-gradient(135deg, red 0 25%, transparent 25%),
+    linear-gradient(225deg, red 0 25%, transparent 25%);
+  background-size: 10% 10%;
+  background-position: 0 0, 10% 0;
+}
+
+.radiant-gradient {
+  width: 200px;
+  height: 200px;
+  background-color: beige;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #f35 0% 50%,
+    #43e 50% 60%,
+    transparent 60%
+  );
+}
+
+.conic-gradient {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(
+    from 30deg at center,
+    black 0deg 90deg,
+    white 90deg 180deg,
+    black 180deg 270deg,
+    white 270deg
+  );
+}
+
+.mask-text {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 128px;
+}
+
+.mask-text > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.playground {
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(at center, red 40deg, transparent 40deg);
+}
+
+.inside-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: white;
+}

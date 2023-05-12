@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" version="1.1" viewBox="0 0 200 200">
+    <defs>
+        <linearGradient id="gradient1" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stop-color="red"/>
+            <stop offset="50%" stop-color="red"/>
+            <stop offset="50%" stop-color="blue"/>
+            <stop offset="100%" stop-color="blue"/>
+        </linearGradient>
+        <pattern id="pattern1" width="0.25" height="0.25" x="0.1" y="0.1" patternContentUnits="objectBoundingBox">
+            <circle cx="0.125" cy="0.125" r="0.125" fill="orange" fill-opacity="0.5"/>
+            <rect width="0.25" height="0.25" fill="none" stroke="black" stroke-width="0.01"/>
+        </pattern>
+        <path id="path1" fill="transparent" d="M 100 100 a 1 1 0 0 0 100 0"/>
+    </defs>
+    <path fill="none" stroke="cyan" stroke-width="1" d="M10 10 h 30 v 40 h -30 v -40 Z"/>
+    <path fill="transparent" stroke="black" d="M 10 10 C 20 20, 40 20, 50 10"/>
+    <path fill="transparent" stroke="black" d="M 70 10 C 70 20, 110 20, 110 10"/>
+    <path fill="transparent" stroke="black" d="M 130 10 C 120 20, 180 20, 170 10"/>
+    <path fill="transparent" stroke="black" d="M 10 60 C 20 80, 40 80, 50 60"/>
+    <path fill="transparent" stroke="black" d="M 70 60 C 70 80, 110 80, 110 60"/>
+    <path fill="transparent" stroke="black" d="M 130 60 C 120 80, 180 80, 170 60"/>
+    <path fill="transparent" stroke="black" d="M 10 110 C 20 140, 40 140, 50 110"/>
+    <path fill="transparent" stroke="black" d="M 70 110 C 70 140, 110 140, 110 110"/>
+    <path fill="transparent" stroke="black" d="M 130 110 C 120 140, 180 140, 170 110"/>
+    <rect width="40" height="40" x="40" y="40" fill="url(#gradient1)"/>
+    <rect width="100" height="100" x="30" y="30" fill="url(#pattern1)" stroke="black"/>
+    <text x="0" y="0">
+        <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path1">A curve. sd dsads adas dasdasdasdas</textPath>
+    </text>
+    <svg width="100" height="100" x="20" y="20" viewBox="0 0 50 50">
+        <rect width="100" height="100" fill="none" stroke="greenyellow"/>
+    </svg>
+    <image width="60" height="60" y="140" href="./tom.png"/>
+</svg>

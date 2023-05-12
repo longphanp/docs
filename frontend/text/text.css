@@ -1,0 +1,126 @@
+body {
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  border: 1px solid orange;
+}
+
+.stroke-text {
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+
+.shadow-text {
+  color: red;
+  text-shadow: 2px 2px #000;
+}
+
+.gradient-text {
+  background: #121fcf;
+  background: linear-gradient(to right, #121fcf 0%, #cf1512 29%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.clip-background-text {
+  background-image: url("../images/tom.png");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.vertical-text {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: -2px;
+  word-spacing: -16px;
+}
+
+.content-css {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  flex-direction: column;
+  border: 1px solid red;
+}
+.content-css:before {
+  content: "Before";
+}
+
+.content-css:after {
+  content: "After";
+}
+
+.transform-text {
+  transform: rotateX(180deg) translateX(12px) scaleX(1.2);
+}
+
+.clip-path-text {
+  font-size: 24px;
+  clip-path: inset(12px 0px 0px 0px);
+}
+
+.letter-spacing {
+  font-size: 20px;
+  letter-spacing: 10px;
+  line-height: 30px;
+}
+
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+
+.line-clamp {
+  width: 300px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.word-break {
+  word-break: break-word;
+}
+
+.non-selectable-text {
+  user-select: none;
+}
+
+.selectable-text::selection {
+  background-color: darkgoldenrod;
+}
+
+.multi-col {
+  column-count: 3;
+  column-gap: 10%;
+  column-width: 120px;
+  overflow: hidden;
+}
+
+.list-text > ul {
+  list-style: "\1F44D";
+}
+
+.list-text li::marker {
+  font-size: 20px;
+}
+
+.text-with-hypens {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  hyphens: auto;
+  overflow: auto;
+}

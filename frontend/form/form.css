@@ -1,0 +1,101 @@
+hr {
+  border: 2px black solid;
+}
+
+/*required field*/
+.input-required {
+  all: unset;
+  border: 2px solid black;
+}
+
+.input-required:invalid:required {
+  border-color: red;
+}
+
+.input-required:invalid:required:focus,
+.input-required:focus {
+  border-color: blue;
+}
+
+.input-required:valid {
+  border-color: green;
+}
+
+/*pattern field*/
+
+.input-pattern {
+  all: unset;
+  border: 2px solid grey;
+}
+
+.input-pattern:hover {
+  border-color: blue;
+}
+
+.input-pattern:invalid {
+  border-color: red;
+}
+
+.input-pattern:focus:valid {
+  border-color: green;
+}
+
+/*max-min length field*/
+.input-max-min {
+  all: unset;
+  border: 2px solid magenta;
+}
+
+.input-max-min:invalid {
+  border-color: red;
+}
+
+/*number field*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.input-number {
+  all: unset;
+  border: 2px solid black;
+  -moz-appearance: textfield;
+}
+
+.input-number:hover {
+  border-color: blue;
+}
+
+/*autofill field*/
+
+.input-autofill {
+  all: unset;
+  border: 2px solid blueviolet;
+}
+
+.input-autofill:-webkit-autofill {
+  box-shadow: 0 0 0 50px white inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: red;
+}
+
+/*file field*/
+
+.input-file {
+  all: unset;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.label-file {
+  cursor: pointer;
+}
+
+/*Cardet color*/
+
+.caret-color {
+  font-size: 32px;
+  caret-color: chartreuse;
+}

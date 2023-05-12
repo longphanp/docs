@@ -1,0 +1,168 @@
+html {
+  font-family: "Secular One", sans-serif;
+}
+
+.mouse-interact {
+  width: 100%;
+  height: 400px;
+  display: grid;
+  place-items: center;
+  cursor: default;
+  border: 1px solid crimson;
+  position: relative;
+  overflow: hidden;
+}
+
+.mouse-interact > p {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 128px;
+  font-family: "Secular One", sans-serif;
+  font-weight: 900;
+  background-color: white;
+  color: black;
+  mix-blend-mode: screen;
+}
+
+.group-of-circle {
+  position: absolute;
+  background-color: #3c486b;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.yellow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #f9d949;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+
+.gray {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: #f0f0f0;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-color: #f45050;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.animate-on-scroll {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  font-size: 128px;
+}
+
+.animate-on-scroll > * {
+  height: 600px;
+  display: grid;
+  place-items: center;
+}
+
+.animate-on-scroll .text {
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: all 3.5s ease-in;
+}
+
+.animate-on-scroll .text.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.animte-on-scroll svg {
+  aspect-ratio: 1/1;
+}
+
+.animate-on-scroll img {
+  object-fit: contain;
+  height: 100%;
+  transform: translateX(180px);
+  transform-origin: center;
+}
+
+.drag-and-drop {
+  height: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.drag-and-drop .col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 30%;
+  background-color: darkkhaki;
+  opacity: 0.5;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 300ms;
+}
+
+.drag-and-drop .box {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: deepskyblue;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.drag-and-drop .nocolor {
+  opacity: 0;
+}
+
+.drag-and-drop .drag-obj {
+  background-color: deepskyblue;
+}
+
+.highlight {
+  background-color: firebrick !important;
+}
+
+.touch-ground {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.scroll-object {
+  height: 100%;
+  width: 2000px;
+  background: linear-gradient(
+    to right,
+    #617143 20%,
+    #df7857 20% 50%,
+    #e7ab9a 50% 80%,
+    #ede9d5 80%
+  );
+  background-position: 0 0;
+}
