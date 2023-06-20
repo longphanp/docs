@@ -8,11 +8,3 @@ boxBackground.addEventListener("mousemove", (e) => {
 setTimeout(() => {
   console.log("After 1 second");
 }, 1000);
-
-if (window.Worker) {
-  const myWorker = new Worker("./worker.js");
-  console.log("web worker");
-  myWorker.onmessage = (e) => {
-    console.log("Message received from worker", e.data);
-  };
-}

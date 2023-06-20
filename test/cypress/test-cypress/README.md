@@ -63,3 +63,11 @@ describe("Test template", () => {
 # Actions
 
 [https://docs.cypress.io/guides/core-concepts/interacting-with-elements](https://docs.cypress.io/guides/core-concepts/interacting-with-elements)
+
+# Networks
+
+[https://docs.cypress.io/guides/guides/network-requests](https://docs.cypress.io/guides/guides/network-requests)
+
+# Test coverage
+
+[https://docs.cypress.io/guides/tooling/code-coverage](https://docs.cypress.io/guides/tooling/code-coverage)

@@ -1,7 +1,15 @@
 **#!/bin/bash**
 
+### Command
+
+```bash
+    # -- mean end of options
+    [command] -- [...]
+```
+
 ### Navigation
-``` bash
+
+```bash
  cd [path] | [.] | [..] | [~]
  # . : current dir
  # .. : parrent dir
@@ -9,6 +17,7 @@
 ```
 
 ### Permission
+
 ```bash
 	chmod [options] [mode] [files]
 	# options: -R - apply for all chidren files and folders
@@ -18,19 +27,22 @@
 	# order: owner > owner group > everyone
 	# +: add permssion, -: clear permission
 
-# Example: 
+# Example:
 	chmod -R 777 ./file
 	chmod +x ./file
 ```
 
 ### Xargs
+
 ```bash
-	echo 1 2 3 4 | xargs
+    printf "1;2;3;4;5" | xargs -d ';' -I {} touch {}.txt
+
 	find /dir -name "*.txt" | xargs -I {} tar cf file.tar {}
 ```
 
 ### Curl
-``` bash
+
+```bash
 	curl [options] -X [GET|POST|PUT|DELETE] [path] -d [data] -o [output file]
 	# 	options:
 	#  -i: get response headers
@@ -38,18 +50,21 @@
 ```
 
 ### SSH
+
 ```bash
-	ssh -p [port] [user]@[host]
+	ssh -p [port] -i [private-key] [user]@[host]
 	scp -r [src_user]@[src_host]:[path] [des_user]@[des_host]:[path]
 ```
 
 ### Normal command
+
 ```
 	apropos # find command
 	time [command] # stopwatch
 ```
 
 ### Files
+
 ```bash
 	pwd  # current workding dir
 	mkdir # make dir
@@ -65,7 +80,8 @@
 ```
 
 ### System
-``` bash
+
+```bash
 	date # current date and time
 	whoami # who am i
 	df # disk usage
@@ -75,7 +91,8 @@
 ```
 
 ### Process
-``` bash
+
+```bash
 	ps # current active processes
 	top # display all runnning processes
 	kill [pid] # kill process
@@ -84,7 +101,8 @@
 ```
 
 ### Compression
-``` bash
+
+```bash
 	tar cf file.tar files # create tar
 	tar xf file.tar # extract files
 	tar czf file.tar.gz files # create gzip
@@ -92,6 +110,7 @@
 ```
 
 ### Network
+
 ```bash
 	ping [host] # ping
 	whois [domain] # get infor for domain
@@ -99,18 +118,21 @@
 ```
 
 ### Searching
+
 ```bash
 	grep -r -e [regrex] [dir] # search in files
 	find [path] -type [f|d] -name [name]
 ```
 
 ### Pipes
+
 ```bash
 	cmd1 | cmd2  # for stdout
 	cmd1 |& cmd2 # for stderr
 ```
 
 ### Chain operator
+
 ```bash
 	cmd1; cmd2 # each command run independently
 	cmd1 && cmd2 # cmd2 only run if cmd1 run successful
@@ -118,9 +140,30 @@
 ```
 
 ### Redirection
+
 ```bash
-	[result] > [file] # default output
-	[result] 1> [file] # stdout
+	[command] > [file] # default output
+	[command] 1> [file] # stdout
 	[error] 2> [file]  # stderr
-	[result] $> [file]: # both
+	[command] $> [file]: # both
+    [command] > [file] 2>&1 # combine stderr and stdout
+    [command] >&2 # output to stderr
+    [command1] <(command2) # result of command2 pass as file to command1
+```
+
+### Heredocs
+
+```bash
+    echo <<EOF
+    dsadsadsad
+    asdsadsa
+    sdsadsadasd
+    EOF
+
+```
+
+### Herestring
+
+```bash
+    echo <<<"dsddsadsa"
 ```

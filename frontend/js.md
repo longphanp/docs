@@ -9,3 +9,7 @@
 # Window Event
 
 [https://developer.mozilla.org/en-US/docs/Web/API/Window/afterprint_event](https://developer.mozilla.org/en-US/docs/Web/API/Window/afterprint_event)
+
+# Web API
+
+[https://developer.mozilla.org/en-US/docs/Web/Guide/API](https://developer.mozilla.org/en-US/docs/Web/Guide/API)
